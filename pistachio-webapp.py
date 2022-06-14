@@ -8,7 +8,7 @@ import os
 import splitfolders
 import streamlit as st
 import wget
-from patool import patoolib
+import patoolib
 from pyunpack import Archive
 
 
