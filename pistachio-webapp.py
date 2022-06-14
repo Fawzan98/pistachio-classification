@@ -8,7 +8,7 @@ import os
 import splitfolders
 import streamlit as st
 import wget
-import patoolib
+import patoolib as pt
 from pyunpack import Archive
 
 
@@ -35,7 +35,7 @@ st.write(os.listdir())
 #extract dataset from rar into file
 #Archive("pistachio_imgdataset.rar').extractall('/content')
 
-patoolib.extract_archive(rar, outdir='/content')
+pt.extract_archive(rar, outdir='/content')
 #rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
 splitfolders.ratio("./content/Pistachio_Image_Dataset", output="output", seed=239, ratio=(.8, .2))
