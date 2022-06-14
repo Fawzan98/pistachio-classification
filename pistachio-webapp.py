@@ -35,7 +35,7 @@ st.write(entries)
 #extract dataset from rar into file
 
 
-patoolib.extract_archive(os"pistachio_imgdataset.rar", outdir="/content")
+patoolib.extract_archive("pistachio_imgdataset.rar", outdir="/content")
 
 splitfolders.ratio("./content/Pistachio_Image_Dataset", output="output", seed=239, ratio=(.8, .2))
 
