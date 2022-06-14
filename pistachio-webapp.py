@@ -7,6 +7,8 @@ import random
 import os
 import splitfolders
 import streamlit as st
+import wget
+import patoolib
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -19,6 +21,23 @@ and [Step By Step VGG16 Implementation In Keras For Beginners](https://towardsda
 st.header("Dataset")
 
 st.write("""
-The dataset obtained in Kaggle which contain a total of 2148 images, 1232 of Kirmizi and 916 of Siirt Pistachio.
-
+The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 of Kirmizi and 916 of Siirt Pistachio.\n
+The datasets then split into 80% for training and 20% for testing phase.
 """)
+
+data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistachio_imgdataset.rar"
+wget.download(data_url)
+
+#extract dataset from rar into file
+patoolib.extract_archive("pistachio_imgdataset.rar", outdir="/content")
+
+splitfolders.ratio("/content/Pistachio_Image_Dataset", output="output", seed=239, ratio=(.8, .2))
+
+train_path = "./output/train"
+test_path = "./output/val"
+
+
+
+
+
+
