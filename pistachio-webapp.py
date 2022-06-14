@@ -30,10 +30,12 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistac
 #wget.download(data_url)
 
 st.write(os.listdir())
+entries = os.listdir('my_directory/')
+st.write(entries)
 #extract dataset from rar into file
 
 
-patoolib.extract_archive("pistachio_imgdataset.rar", outdir="/content")
+patoolib.extract_archive(os"pistachio_imgdataset.rar", outdir="/content")
 
 splitfolders.ratio("./content/Pistachio_Image_Dataset", output="output", seed=239, ratio=(.8, .2))
 
