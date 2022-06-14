@@ -10,7 +10,7 @@ import streamlit as st
 
 st.write("""
 # Pistachio Classification Prediction App
-This app will predicts the **Pistachio** type by using VGG16, a convolutional neural network with 16 layers deep!
+This app will predicts the **Pistachio** based on its type by using VGG16, a convolutional neural network with 16 layers deep!\n
 Furthermore, the model used transfer learning where the model has been pre-trained from ImageNet database.
 """)
 
