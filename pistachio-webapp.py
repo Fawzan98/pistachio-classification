@@ -30,7 +30,7 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistac
 
 st.write(os.listdir())
 #extract dataset from rar into file
-pip install patoolib
+pip install patool
 import patoolib
 patoolib.extract_archive("./pistachio_imgdataset.rar", outdir="/content")
 
