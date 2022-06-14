@@ -10,7 +10,7 @@ pathlib==1.0.1
 patool==1.12
 split-folders==0.5.1
 streamlit==1.10.0
-tensorflow==2.8.2+zzzcolab20220527125636
+tensorflow==2.8.2
 tensorflow-datasets==4.0.1
 tensorflow-estimator==2.8.0
 tensorflow-gcs-config==2.8.0
