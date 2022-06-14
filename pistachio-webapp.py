@@ -6,5 +6,9 @@ import matplotlib.image as mpimg
 import random
 import os
 import splitfolders
+import streamlit as st
 
-st.write("Hello semuaaaa")
+st.write("""
+# Edited Simple Iris Flower Prediction App
+This app predicts the **Iris flower** type!
+""")
