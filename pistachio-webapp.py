@@ -26,7 +26,12 @@ The datasets then split into 80% for training and 20% for testing phase.
 """)
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistachio_imgdataset.rar"
-wget.download(data_url)
+#wget.download(data_url)
+os.remove("pistachio_imgdataset (1).rar")
+os.remove("pistachio_imgdataset (2).rar")
+os.remove("pistachio_imgdataset (3).rar")
+
+
 st.write(os.listdir())
 #extract dataset from rar into file
 patoolib.extract_archive("pistachio_imgdataset.rar", outdir="/content")
