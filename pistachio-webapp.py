@@ -13,3 +13,6 @@ st.write("""
 This app will predicts the **Pistachio** type by using VGG16, a convolutional neural network with 16 layers deep!
 Furthermore, the model used transfer learning where the model has been pre-trained from ImageNet database.
 """)
+
+st.title("The app title")
+st.header("Pistachio Classification Prediction App")
