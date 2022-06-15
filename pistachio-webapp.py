@@ -13,6 +13,7 @@ import random
 import tarfile
 import urllib.request
 import gdown
+import pathlib import Path
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -29,7 +30,13 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 
-#os.mkdir("images")
+fle=Path('images')
+
+if fle.is_file():
+  os.rmdir("images")
+  os.mkdir("images")
+else:
+  os.mkdir("images")
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
@@ -42,7 +49,7 @@ while i <= 10:
   
   
   
-os.chdir("images")
+#os.chdir("images")
 
 
 st.header("Model")
