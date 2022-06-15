@@ -8,3 +8,8 @@ VGG16 is a convolutional neural network with 16 layers deep and the model used t
 Coding source inspiration : [Pistachio Detection by Ayush Verma](https://www.kaggle.com/code/ayushv322/pistachio-detection-vgg16-97-9) 
 and [Step By Step VGG16 Implementation In Keras For Beginners](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 """)
+
+
+from PIL import Image
+img1 = Image.open('VGG16.png')
+st.write(img1)
