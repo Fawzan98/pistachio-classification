@@ -42,11 +42,11 @@ st.write("Current working directory: {0}".format(cwd))
 #os.mkdir('images/Siirt_Pistachio')
 #os.mkdir('images/Kirmizi_Pistachio')
 
-labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
-for subfolder_name in labels:
-  os.makedirs(os.path.join('./images', subfolder_name))
+#labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
+#for subfolder_name in labels:
+#  os.makedirs(os.path.join('./images', subfolder_name))
 
-#os.chdir("/images")
+os.chdir("/images")
 i = 1
 
 while i <= 10:
