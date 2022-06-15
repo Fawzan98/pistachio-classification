@@ -44,10 +44,12 @@ else:
   st.write(os.listdir())
   os.mkdir('images')
   i = 1
+  j = 1
   while i <= 10:
     wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/Kirmizi_Pistachio")
-    wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/Siirt_Pistachio")
+    wget.download(data_url + f"Siirt/siirt ({j}).jpg", out = "images/Siirt_Pistachio")
     i = i + 1
+    j = j + 1
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 data_dir = "/images"
