@@ -37,8 +37,10 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 fle=Path('images')
 
 if fle.is_file():
+  st.write(os.listdir())
   st.write("File exist! Displaying random image of Kirmizi and Siirt Pistachio.")
 else:
+  
   os.mkdir("images")
   i = 1
   while i <= 10:
