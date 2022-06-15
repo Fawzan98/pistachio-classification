@@ -14,6 +14,7 @@ import tarfile
 import urllib.request
 import gdown
 from pathlib import Path
+import shutil
 
 st.write("""
 # Pistachio Classification Prediction App
