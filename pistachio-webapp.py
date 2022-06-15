@@ -38,7 +38,7 @@ The datasets then split into 80% for training and 20% for testing phase.
 #  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
  # wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
  # i = i + 1
-os.chdir("..")
+#os.chdir("..")
 #os.remove("pistachio_imgdataset (1).rar")
 #os.chdir("..")
 
