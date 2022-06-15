@@ -29,7 +29,7 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 
-os.mkdir("images")
+#os.mkdir("images")
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
@@ -39,9 +39,10 @@ while i <= 10:
   wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
   wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
   i = i + 1
+  
+  
+  
 os.chdir("images")
-
-
 
 
 st.header("Model")
