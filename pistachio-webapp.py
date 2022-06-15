@@ -11,6 +11,7 @@ import wget
 import patoolib as pt
 import random
 import tarfile
+import urllib.request
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -47,14 +48,10 @@ Now we will try the accuracy of the model in predicting between Kirmizi and Siir
 """)
 
 model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-#model_file =wget.download(model_tar)
+ftpstream = urllib.request.urlopen(thetarfile)
+thetarfile = tarfile.open(fileobj=ftpstream, mode="r|gz")
+thetarfile.extractall()
 
-tfile = tarfile.open(model_tar, "r:gz")
-for member in tar.getmembers():
-     f = tar.extractfile(member)
-     if f is not None:
-         content = f.read()
-#tfile.extractall()
 
 st.write(os.listdir())
 
