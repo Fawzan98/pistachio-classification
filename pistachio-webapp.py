@@ -39,11 +39,11 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 
 
 
-os.mkdir('images',exist_ok=True)
+os.makedirs('images',exist_ok=True)
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 for subfolder_name in labels:
-  os.mkdir(os.path.join('images', subfolder_name))
+  os.makedirs(os.path.join('images', subfolder_name))
 
 
 i = 1
