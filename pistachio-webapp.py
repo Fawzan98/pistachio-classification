@@ -32,7 +32,7 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 
 
 i = 1
-while <= 10:
+while i <= 10:
   wget.download(f"https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/Kirmizi/kirmizi ({i}).jpg", out = out_dir)
   i = i + 1
 
