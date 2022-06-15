@@ -33,25 +33,27 @@ The datasets then split into 80% for training and 20% for testing phase.
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
-shutil.rmtree('images')
+#shutil.rmtree('images')
 
 fle=Path('images')
 
-if fle.is_file():
-  st.write(os.listdir())
-  st.write("File exist! Displaying random image of Kirmizi and Siirt Pistachio.")
-else:
-  st.write(os.listdir())
-  #os.mkdir('images')
-  i = 1
-  j = 1
-  while i <= 10:
-    wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
-    #wget.download(data_url + f"Siirt/siirt ({j}).jpg", out = "images/Siirt_Pistachio")
-    i = i + 1
-    j = j + 1
+
+st.write(os.listdir())
+os.mkdir('images')
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
+for subfolder_name in labels:
+  os.mkdir(os.path.join('images', subfolder_name))
+
+
+i = 1
+
+while i <= 10:
+ wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/Kirmizi_Pistachio")
+ wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/Siirt_Pistachio")
+ i = i + 1
+ 
+
 data_dir = "/images"
     
 def load_random_imgs_from_folder(folder,label):
