@@ -48,10 +48,13 @@ st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
 
-url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-output = "model.tar.gz"
-gdown.download(url=url, output=output, quiet=False, fuzzy=True)
+#url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+#output = "model.tar.gz"
+#gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
+file = tarfile.open("model.tar.gz")
+file.extractall()
+file.close()
 
 st.write(os.listdir())
 
