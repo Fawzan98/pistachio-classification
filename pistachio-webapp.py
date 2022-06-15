@@ -35,7 +35,7 @@ i = 1
 #while i <= 10:
 #  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
  # wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
-  i = i + 1
+ # i = i + 1
 os.chdir("images")
 #os.remove("pistachio_imgdataset (1).rar")
 st.write(os.listdir())
