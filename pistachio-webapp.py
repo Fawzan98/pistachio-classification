@@ -32,7 +32,7 @@ The datasets then split into 80% for training and 20% for testing phase.
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
-os.remove('images')
+os.rmdir('images')
 
 fle=Path('images')
 
@@ -42,8 +42,8 @@ else:
   os.mkdir("images")
   i = 1
   while i <= 10:
-    wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/kirmizi")
-    wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/siirt")
+    wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/Kirmizi_Pistachio")
+    wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/Siirt_Pistachio")
     i = i + 1
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
