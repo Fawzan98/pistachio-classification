@@ -9,8 +9,7 @@ import splitfolders
 import streamlit as st
 import wget
 import patoolib as pt
-from pyunpack import Archive
-import shutil
+
 
 
 st.write("""
@@ -28,22 +27,17 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 
-data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistachio_imgdataset.rar"
+#data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistachio_imgdataset.rar"
 #wget.download(data_url)
 #os.remove("pistachio_imgdataset (1).rar")
-st.write(os.listdir())
+#st.write(os.listdir())
 
-#extract dataset from rar into file
-#Archive("pistachio_imgdataset.rar").extractall(".")
+
 
 shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
 #rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
-splitfolders.ratio("./content/Pistachio_Image_Dataset", output="output", seed=239, ratio=(.8, .2))
-
-train_path = "./output/train"
-test_path = "./output/val"
 
 
 
