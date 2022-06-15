@@ -12,6 +12,7 @@ import patoolib as pt
 import random
 import tarfile
 import urllib.request
+import gdown
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -47,10 +48,9 @@ st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
 
-thetarfile = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-ftpstream = urllib.request.urlopen(thetarfile)
-thetarfile = tarfile.open(fileobj=ftpstream, mode="r|gz")
-thetarfile.extractall()
+url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+output = "model.tar.gz"
+gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
 
 st.write(os.listdir())
