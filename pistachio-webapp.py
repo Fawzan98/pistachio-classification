@@ -27,7 +27,7 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 
-data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/Image%20testing"
+data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/Img_testing"
 wget.download(data_url)
 #os.remove("pistachio_imgdataset (1).rar")
 st.write(os.listdir())
