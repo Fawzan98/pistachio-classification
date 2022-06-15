@@ -10,6 +10,7 @@ import streamlit as st
 import wget
 import patoolib as pt
 import random
+import tarfile
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -37,13 +38,19 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
  # i = i + 1
 #os.chdir("images")
 #os.remove("pistachio_imgdataset (1).rar")
-os.chdir("..")
-st.write(os.listdir())
+#os.chdir("..")
+
 
 st.header("Model")
 st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
+
+model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+
+tfile = tarfile.open(model_tar)
+tfile.extractall()
+st.write(os.listdir())
 
 #shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
