@@ -41,10 +41,11 @@ st.write(os.listdir())
 #os.mkdir('images/Siirt_Pistachio')
 #os.mkdir('images/Kirmizi_Pistachio')
 
-labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
-for subfolder_name in labels:
-  os.makedirs(os.path.join('images', subfolder_name))
-
+#labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
+#for subfolder_name in labels:
+#  os.makedirs(os.path.join('images', subfolder_name))
+os.chdir("images")
+st.write(os.listdir())
 
 i = 1
 
