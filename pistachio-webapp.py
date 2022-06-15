@@ -25,7 +25,7 @@ st.write("""
 The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 of Kirmizi and 916 of Siirt Pistachio.\n
 The datasets then split into 80% for training and 20% for testing phase.
 """)
-out_dir = "images/kirmizi"
+
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
@@ -37,7 +37,8 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
  # i = i + 1
 #os.chdir("images")
 #os.remove("pistachio_imgdataset (1).rar")
-#st.write(os.listdir())
+os.chdir("..")
+st.write(os.listdir())
 
 st.header("Model")
 st.write("""
