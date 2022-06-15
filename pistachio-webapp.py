@@ -47,12 +47,16 @@ Now we will try the accuracy of the model in predicting between Kirmizi and Siir
 """)
 
 model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-model_file =wget.download(model_tar)
-st.write(os.listdir())
-#tfile = tarfile.open(model_file)
+#model_file =wget.download(model_tar)
+
+tfile = tarfile.open(model_tar, "r:gz")
+for member in tar.getmembers():
+     f = tar.extractfile(member)
+     if f is not None:
+         content = f.read()
 #tfile.extractall()
 
-
+st.write(os.listdir())
 
 
 
