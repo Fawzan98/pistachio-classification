@@ -10,6 +10,7 @@ import streamlit as st
 import wget
 import patoolib as pt
 from pyunpack import Archive
+import shutil
 
 
 st.write("""
@@ -33,8 +34,9 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/raw/main/pistac
 st.write(os.listdir())
 
 #extract dataset from rar into file
-Archive("pistachio_imgdataset.rar").extractall(".")
+#Archive("pistachio_imgdataset.rar").extractall(".")
 
+shutil.unpack_archive("pistachio_imgdataset.rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
 #rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
