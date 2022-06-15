@@ -32,7 +32,7 @@ The datasets then split into 80% for training and 20% for testing phase.
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
-#os.remove('images')
+shutil.rmtree('images')
 
 fle=Path('images')
 
@@ -41,7 +41,6 @@ if fle.is_file():
   st.write("File exist! Displaying random image of Kirmizi and Siirt Pistachio.")
 else:
   st.write(os.listdir())
-  os.mkdir("images")
   i = 1
   while i <= 10:
     wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/Kirmizi_Pistachio")
