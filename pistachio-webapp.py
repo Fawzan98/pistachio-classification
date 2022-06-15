@@ -28,12 +28,12 @@ The datasets then split into 80% for training and 20% for testing phase.
 """)
 out_dir = "images/kirmizi"
 
-data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing"
+data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
 
 i = 1
 while i <= 10:
-  wget.download(f"https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/Kirmizi/kirmizi ({i}).jpg", out = out_dir)
+  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg")
   i = i + 1
 
 #os.remove("pistachio_imgdataset (1).rar")
