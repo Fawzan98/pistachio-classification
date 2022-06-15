@@ -35,11 +35,11 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 
 #shutil.rmtree('images')
 
-fle=Path('images')
 
 
-st.write(os.listdir())
-os.mkdir('images')
+
+
+os.mkdir('images',exist_ok=True)
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 for subfolder_name in labels:
@@ -53,7 +53,7 @@ while i <= 10:
  wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/Siirt_Pistachio")
  i = i + 1
  
-
+st.write(os.listdir())
 data_dir = "/images"
     
 def load_random_imgs_from_folder(folder,label):
