@@ -5,7 +5,7 @@ import streamlit as st
 st.sidebar.markdown('''
 # Table of Contents
 - [Introduction](#section-1)
-- [Section 2](#section-2)
+- [Dataset](#section-2)
 
 ''', unsafe_allow_html=True)
 
@@ -19,6 +19,10 @@ Coding source inspiration : [Pistachio Detection by Ayush Verma](https://www.kag
 and [Step By Step VGG16 Implementation In Keras For Beginners](https://towardsdatascience.com/step-by-step-vgg16-implementation-in-keras-for-beginners-a833c686ae6c)
 """)
 
+from PIL import Image
+img1 = Image.open('VGG16.png')
+st.image(img1, caption = "VGG16 network architecture", use_column_width='always')
+
 st.header('Dataset')
 st.write('''
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus. Amet mauris commodo quis imperdiet. In metus vulputate eu scelerisque. Facilisis gravida neque convallis a cras semper. Quis vel eros donec ac odio. Posuere urna nec tincidunt praesent semper feugiat nibh sed. Vitae et leo duis ut. Consectetur lorem donec massa sapien faucibus et molestie ac feugiat. Scelerisque varius morbi enim nunc faucibus a. Eget velit aliquet sagittis id consectetur purus ut. Massa eget egestas purus viverra. Libero justo laoreet sit amet cursus sit. Nibh nisl condimentum id venenatis a condimentum vitae sapien.
@@ -27,6 +31,4 @@ Commodo sed egestas egestas fringilla phasellus faucibus scelerisque. Pulvinar m
 ''')
 
 
-from PIL import Image
-img1 = Image.open('VGG16.png')
-st.image(img1, caption = "VGG16 network architecture", use_column_width='always')
+
