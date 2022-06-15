@@ -9,7 +9,6 @@ import splitfolders
 import streamlit as st
 import wget
 import patoolib as pt
-import urllib
 
 
 
@@ -27,12 +26,17 @@ st.write("""
 The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 of Kirmizi and 916 of Siirt Pistachio.\n
 The datasets then split into 80% for training and 20% for testing phase.
 """)
+out_dir = "images/kirmizi"
+in_dir1 = "kirmizi (" )
+data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing"
 
-data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/Img_testing"
-#wget.download(data_url)
+
+i = 1
+while <= 10:
+  wget.download(f"https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/Kirmizi/kirmizi ({i}).jpg", out = out_dir)
+  i = i + 1
+
 #os.remove("pistachio_imgdataset (1).rar")
-outdir=""
-resultFilePath, responseHeaders = urllib.urlretrieve(data_url, outdir)
 st.write(os.listdir())
 
 
