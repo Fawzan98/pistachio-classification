@@ -16,6 +16,7 @@ import gdown
 from pathlib import Path
 import shutil
 
+
 st.write("""
 # Pistachio Classification Prediction App
 This app capable on making **classification** on Pistachio images by feeding the various types of Pistachio images into a deep learning model named VGG116.\n
@@ -36,10 +37,7 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 #shutil.rmtree('images')
 
 
-
-
-
-os.makedirs('images',exist_ok=True)
+Path("images").mkdir(parents=True,exist_ok=True)
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 for subfolder_name in labels:
