@@ -46,16 +46,13 @@ st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
 
-#model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-#model_file =wget.download(model_tar, )
+model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+model_file =wget.download(model_tar)
 st.write(os.listdir())
 #tfile = tarfile.open(model_file)
 #tfile.extractall()
 
 
-#shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
-#pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
-#rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
 
 
