@@ -38,7 +38,7 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 #  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
  # wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
  # i = i + 1
-#os.chdir("images")
+os.chdir("viewtgd7de93.tmp")
 #os.remove("pistachio_imgdataset (1).rar")
 #os.chdir("..")
 
@@ -52,9 +52,9 @@ Now we will try the accuracy of the model in predicting between Kirmizi and Siir
 #output = "model.tar.gz"
 #gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
-file = tarfile.open("model.tar.gz")
-file.extractall()
-file.close()
+#file = tarfile.open("model.tar.gz")
+#file.extractall()
+#file.close()
 
 st.write(os.listdir())
 
