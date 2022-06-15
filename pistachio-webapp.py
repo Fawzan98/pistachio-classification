@@ -46,7 +46,7 @@ st.write("Current working directory: {0}".format(cwd))
 #for subfolder_name in labels:
 #  os.makedirs(os.path.join('./images', subfolder_name))
 
-os.chdir("images")
+os.chdir(r"images")
 st.write(os.listdir())
 i = 1
 
