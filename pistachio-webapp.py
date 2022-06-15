@@ -13,7 +13,7 @@ import random
 import tarfile
 import urllib.request
 import gdown
-import pathlib import Path
+from pathlib import Path
 
 st.write("""
 # Pistachio Classification Prediction App
