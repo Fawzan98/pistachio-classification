@@ -1,3 +1,4 @@
+gdown==4.4.0
 ipython==5.5.0
 keras==2.8.0
 Keras-Preprocessing==1.1.2
