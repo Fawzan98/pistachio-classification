@@ -22,5 +22,6 @@ tensorflow-io-gcs-filesystem==0.26.0
 tensorflow-metadata==1.8.0
 tensorflow-probability==0.16.0
 unrar==0.4
+urllib3==1.24.3
 wget==3.2
 
