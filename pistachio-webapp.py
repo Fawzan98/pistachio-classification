@@ -34,7 +34,7 @@ The datasets then split into 80% for training and 20% for testing phase.
 
 
 
-shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
+#shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
 #rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
