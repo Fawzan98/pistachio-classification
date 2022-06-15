@@ -30,22 +30,39 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 
+data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
+
+os.remove('images')
+
 fle=Path('images')
 
 if fle.is_file():
-  os.remove("images")
-  os.mkdir("images")
+  st.write("File exist! Displaying random image of Kirmizi and Siirt Pistachio.")
 else:
   os.mkdir("images")
+  i = 1
+  while i <= 10:
+    wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images/kirmizi")
+    wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images/siirt")
+    i = i + 1
 
-data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
+labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
+data_dir = "/images"
+    
+def load_random_imgs_from_folder(folder,label):
+  plt.figure(figsize=(15,15))
+  for i in range(3):
+    file = random.choice(os.listdir(folder))
+    image_path = os.path.join(folder, file)
+    img=mpimg.imread(image_path)
+    ax=plt.subplot(1,3,i+1)
+    ax.title.set_text(label)
+    plt.xlabel(f'Name: {file}')
+    plt.imshow(img)
+for label in labels:
+    load_random_imgs_from_folder(f"{data_dir}/{label}",label)
 
 
-i = 1
-while i <= 10:
-  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
-  wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
-  i = i + 1
   
   
   
