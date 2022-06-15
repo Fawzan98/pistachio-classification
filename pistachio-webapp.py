@@ -9,8 +9,7 @@ import splitfolders
 import streamlit as st
 import wget
 import patoolib as pt
-
-
+import random
 
 st.write("""
 # Pistachio Classification Prediction App
@@ -36,10 +35,14 @@ data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_t
 #  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
  # wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
  # i = i + 1
-os.chdir("images")
+#os.chdir("images")
 #os.remove("pistachio_imgdataset (1).rar")
-st.write(os.listdir())
+#st.write(os.listdir())
 
+st.header("Model")
+st.write("""
+Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
+""")
 
 #shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
