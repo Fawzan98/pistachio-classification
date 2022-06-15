@@ -30,10 +30,11 @@ out_dir = "images/kirmizi"
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
-
+os.mkdir("images")
 i = 1
 while i <= 10:
-  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg")
+  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
+  wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
   i = i + 1
 
 #os.remove("pistachio_imgdataset (1).rar")
