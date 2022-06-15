@@ -27,7 +27,7 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 The datasets then split into 80% for training and 20% for testing phase.
 """)
 out_dir = "images/kirmizi"
-in_dir1 = "kirmizi (" )
+
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing"
 
 
