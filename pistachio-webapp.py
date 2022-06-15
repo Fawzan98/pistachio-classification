@@ -33,7 +33,7 @@ The datasets then split into 80% for training and 20% for testing phase.
 fle=Path('images')
 
 if fle.is_file():
-  os.rmdir("images")
+  os.remove("images")
   os.mkdir("images")
 else:
   os.mkdir("images")
