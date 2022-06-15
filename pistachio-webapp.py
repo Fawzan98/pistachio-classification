@@ -34,11 +34,11 @@ The datasets then split into 80% for training and 20% for testing phase.
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
 
-i = 1
-while i <= 10:
-  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
-  wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
-  i = i + 1
+#i = 1
+#while i <= 10:
+#  wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "images")
+ # wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "images")
+ # i = i + 1
 #os.chdir("..")
 
 
@@ -49,13 +49,13 @@ st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
 
-url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
-output = "model.tar.gz"
-gdown.download(url=url, output=output, quiet=False, fuzzy=True)
+#url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+#output = "model.tar.gz"
+#gdown.download(url=url, output=output, quiet=False, fuzzy=True)
 
-file = tarfile.open("model.tar.gz")
-file.extractall()
-file.close()
+#file = tarfile.open("model.tar.gz")
+#file.extractall()
+#file.close()
 
 st.write(os.listdir())
 
