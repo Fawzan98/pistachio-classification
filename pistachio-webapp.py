@@ -36,7 +36,7 @@ st.write(os.listdir())
 #extract dataset from rar into file
 #Archive("pistachio_imgdataset.rar").extractall(".")
 
-shutil.unpack_archive("pistachio_imgdataset.rar")
+shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
 #pt.extract_archive("pistachio_imgdataset.rar", outdir='/content')
 #rar = rarfile.RarFile('pistachio_imgdataset.rar')
 
