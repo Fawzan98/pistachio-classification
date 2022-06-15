@@ -12,4 +12,4 @@ and [Step By Step VGG16 Implementation In Keras For Beginners](https://towardsda
 
 from PIL import Image
 img1 = Image.open('VGG16.png')
-st.image(img1, caption = "VGG16 network architecture", use_column_width='auto')
+st.image(img1, caption = "VGG16 network architecture", use_column_width='always')
