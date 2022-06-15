@@ -28,10 +28,10 @@ The datasets then split into 80% for training and 20% for testing phase.
 """)
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/Img_testing"
-wget.download(data_url)
+#wget.download(data_url)
 #os.remove("pistachio_imgdataset (1).rar")
 st.write(os.listdir())
-
+svn checkout https://github.com/Fawzan98/pistachio-classification/tree/main/Img_testing
 
 
 #shutil.unpack_archive("pistachio_imgdataset.rar","/content", "rar")
