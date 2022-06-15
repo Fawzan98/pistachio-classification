@@ -34,10 +34,10 @@ The datasets then split into 80% for training and 20% for testing phase.
 
 data_url = "https://github.com/Fawzan98/pistachio-classification/tree/main/img_testing/"
 
-#shutil.rmtree('images')
+shutil.rmtree('images')
 
-
-Path("images").mkdir(parents=True,exist_ok=True)
+#os.mkdir('images/Siirt_Pistachio')
+#os.mkdir('images/Kirmizi_Pistachio')
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 for subfolder_name in labels:
