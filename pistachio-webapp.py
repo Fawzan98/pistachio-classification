@@ -42,7 +42,7 @@ if fle.is_file():
   st.write("File exist! Displaying random image of Kirmizi and Siirt Pistachio.")
 else:
   st.write(os.listdir())
-  os.mkdir('images')
+  #os.mkdir('images')
   i = 1
   j = 1
   while i <= 10:
