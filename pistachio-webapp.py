@@ -47,7 +47,7 @@ st.write("""
 Now we will try the accuracy of the model in predicting between Kirmizi and Siirt Pistachio.
 """)
 
-model_tar = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+thetarfile = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
 ftpstream = urllib.request.urlopen(thetarfile)
 thetarfile = tarfile.open(fileobj=ftpstream, mode="r|gz")
 thetarfile.extractall()
