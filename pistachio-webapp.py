@@ -44,14 +44,14 @@ st.write("Current working directory: {0}".format(cwd))
 
 labels = ['Siirt_Pistachio', 'Kirmizi_Pistachio']
 for subfolder_name in labels:
-  os.makedirs(os.path.join('/images', subfolder_name))
+  os.makedirs(os.path.join('./images', subfolder_name))
 
 #os.chdir("/images")
 i = 1
 
 while i <= 10:
- wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "/images/Kirmizi_Pistachio")
- wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "/images/Siirt_Pistachio")
+ wget.download(data_url + f"Kirmizi/kirmizi ({i}).jpg", out = "./images/Kirmizi_Pistachio")
+ wget.download(data_url + f"Siirt/siirt ({i}).jpg", out = "./images/Siirt_Pistachio")
  i = i + 1
  
 
