@@ -1,11 +1,12 @@
 import streamlit as st
 
-st.header('**Example App showing Anchor links**')
+
 
 st.sidebar.markdown('''
 # Sections
-- [Section 1](#section-1)
+- [Section asdasd](#section-1)
 - [Section 2](#section-2)
+
 ''', unsafe_allow_html=True)
 
 st.header('Section 1')
