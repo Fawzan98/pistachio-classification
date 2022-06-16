@@ -6,7 +6,7 @@ st.sidebar.markdown('''
 # Table of Contents
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Data Preprocessing](#data preprocessing)
+- [Data Preprocessing](#datapreprocessing)
 
 ''', unsafe_allow_html=True)
 
