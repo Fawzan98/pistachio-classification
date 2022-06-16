@@ -4,6 +4,7 @@ import tarfile
 import gdown
 import os
 from tensorflow.keras.models import load_model
+from keras.preprocessing import image
 import matplotlib.pyplot as plt
 import numpy as np
 
