@@ -121,15 +121,15 @@ img = np.asarray(img)
 #st.plotly_chart(img)
 img = np.expand_dims(img, axis=0)
 
-img7 = Image.open('img_testing/Sirt/siirt (6).jpg')
-st.image(img7, caption = "img_testing/Sirt/siirt (6).jpg")
+img7 = Image.open('img_testing/Siirt/siirt (6).jpg')
+st.image(img7, caption = "img_testing/Siirt/siirt (6).jpg")
 
 
 output = saved_model.predict(img)
 if output[0][0] > output[0][1]:
     st.write('Prediction : Siirt Pistachio')
 else:
-    st.write("Prediction: Kirmizi Pistachio")
+    st.write("Prediction : Kirmizi Pistachio")
 
 
 
