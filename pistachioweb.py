@@ -72,8 +72,8 @@ img4 = Image.open('modeltrain.JPG')
 st.image(img4, caption = "Model in training", use_column_width='always')
 
 
-path = "content"
-if not os.pat.exists(path):
+path = "content/model/vgg16_1.h5"
+if not os.path.exists(path):
   url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
   output = "model.tar.gz"
   gdown.download(url=url, output=output, quiet=False, fuzzy=True)
