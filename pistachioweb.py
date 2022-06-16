@@ -127,9 +127,9 @@ st.image(img7, caption = "img_testing/Kirmizi/kirmizi (1).jpg", use_column_width
 
 output = saved_model.predict(img)
 if output[0][0] > output[0][1]:
-    st.write("Kirmizi Pistachio")
-else:
     st.write('Siirt Pistachio')
+else:
+    st.write("Kirmizi Pistachio")
 
 
 
