@@ -82,7 +82,7 @@ if not os.path.exists(path):
   file.extractall()
   file.close()
 
-  st.write(os.listdr())
+  st.write(os.listdir())
 
 
 
