@@ -117,7 +117,7 @@ saved_model = load_model('./content/model/vgg16_1.h5')
 
 img = image.load_img("img_testing/Kirmizi/kirmizi (1).jpg",target_size=(512,512))
 img = np.asarray(img)
-#plt.imshow(img)
+st.write(plt.imshow(img))
 #st.plotly_chart(img)
 img = np.expand_dims(img, axis=0)
 
