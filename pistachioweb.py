@@ -1,12 +1,13 @@
 import streamlit as st
-
+import as pd
 
 
 st.sidebar.markdown('''
 # Table of Contents
--> [Introduction](#introduction)
+- [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Preprocessing](#preprocessing)
+- [Model Settings] (#model_settings)
 
 ''', unsafe_allow_html=True)
 
@@ -35,6 +36,7 @@ st.image(img2,width=300, caption=["Kirmizi Pistachio", "Siirt Pistachio"])
 st.write('''
 We can see that both Pistachios' look very similar though some of them has distinct features and sometimes can be difficult to recognize from naked eye.
 Now we will be using an Artificial Intelligence to make it learn to make predictions between Kirmizi and Siirt Pistachio.
+The datasets were split into two: training sets and testing sets which contain 80% and 20% respectively.
 ''')
 
 st.header('Preprocessing')
@@ -49,10 +51,19 @@ Also, the model becomes more robust when it is trained on new, slightly altered 
 img3 = Image.open('augment.png')
 st.image(img3, caption = "Example of image augmentation", use_column_width='always')
 
+
+st.header('Model Settings')
 st.write('''
-Before splitting the image dataset into 80% training and 20% testing, the datasets undergoes data augmentation 
-The datasets then split into 80% for training and 20% for testing phase.
+The hyperparameter used in this model shown as listed below:
 ''')
+
+hyperparameter = {
+  "Settings": ["Input Shape", "Epoch", "Learning Rate", "Dropout", "Activation", "Optimizer", "Early Stopping"]
+  "Descriptions": ["512 x 512", "50", "0.005", "0.1", "Softmax", "Adam", "10 Epoch"]
+}
+
+df = pd.DataFrame(hyperparameter)
+st.table(df)
 
 
 
