@@ -29,7 +29,7 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 ''')
 
 img2 = ['kirmizi (23).jpg', 'siirt 24.jpg']
-st.image(img2,width=100, caption=["Kirmizi Pistachio", "Siirt Pistachio"])
+st.image(img2,width=500, caption=["Kirmizi Pistachio", "Siirt Pistachio"])
 
 
 
