@@ -6,7 +6,7 @@ st.sidebar.markdown('''
 # Table of Contents
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Data Preprocessing](#datapreprocessing)
+- [Preprocessing](#preprocessing)
 
 ''', unsafe_allow_html=True)
 
@@ -37,7 +37,7 @@ We can see that both Pistachios' look very similar though some of them has disti
 Now we will be using an Artificial Intelligence to reach conclusion where it could learn to make predictions between Kirmizi and Siirt Pistachio.
 ''')
 
-st.header('Data Preprocessing')
+st.header('Preprocessing')
 st.subheader('Image Augmentation')
 
 st.write('''
@@ -45,6 +45,10 @@ A a technique of applying different transformations to original images which res
 This technique not only expand the size of your dataset but also incorporate a level of variation in the dataset which allows your model to generalize better on unseen data. 
 Also, the model becomes more robust when it is trained on new, slightly altered images.
 ''')
+
+img3 = Image.open('augment.png')
+st.image(img3, caption = "Example of image augmentation", use_column_width='always')
+
 st.write('''
 Before splitting the image dataset into 80% training and 20% testing, the datasets undergoes data augmentation 
 The datasets then split into 80% for training and 20% for testing phase.
