@@ -58,7 +58,7 @@ The hyperparameter used in this model shown as listed below:
 ''')
 
 hyperparameter = {
-  "Settings": ["Input Shape", "Epoch", "Learning Rate", "Dropout", "Activation", "Optimizer", "Early Stopping"]
+  "Settings": ["Input Shape", "Epoch", "Learning Rate", "Dropout", "Activation", "Optimizer", "Early Stopping"],
   "Descriptions": ["512 x 512", "50", "0.005", "0.1", "Softmax", "Adam", "10 Epoch"]
 }
 
