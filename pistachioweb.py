@@ -121,8 +121,8 @@ img = np.asarray(img)
 #st.plotly_chart(img)
 img = np.expand_dims(img, axis=0)
 
-img7 = Image.open('img_testing/Siirt/siirt (3).jpg')
-st.image(img7, caption = "img_testing/Siirt/siirt (3).jpg")
+img7 = Image.open('img_testing/Kirmizi/kirmizi (3).jpg')
+st.image(img7, caption = "img_testing/Kirmizi/kirmizi (3).jpg")
 
 
 output = saved_model.predict(img)
