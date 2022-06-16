@@ -126,6 +126,8 @@ st.image(img7, caption = "img_testing/Siirt/siirt (6).jpg")
 
 
 output = saved_model.predict(img)
+
+st.write(output)
 if output[0][0] > output[0][1]:
     st.write('Prediction : Siirt Pistachio')
 else:
