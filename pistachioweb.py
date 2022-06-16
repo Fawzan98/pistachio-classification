@@ -122,14 +122,14 @@ img = np.asarray(img)
 img = np.expand_dims(img, axis=0)
 
 img7 = Image.open('img_testing/Kirmizi/kirmizi (1).jpg')
-st.image(img7, caption = "img_testing/Kirmizi/kirmizi (1).jpg", use_column_width='always')
+st.image(img7, caption = "img_testing/Kirmizi/kirmizi (1).jpg")
 
 
 output = saved_model.predict(img)
 if output[0][0] > output[0][1]:
-    st.write('Siirt Pistachio')
+    st.write('Prediction : Siirt Pistachio')
 else:
-    st.write("Kirmizi Pistachio")
+    st.write("Prediction: Kirmizi Pistachio")
 
 
 
