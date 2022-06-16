@@ -4,9 +4,9 @@ import pandas as pd
 
 st.sidebar.markdown('''
 # Table of Contents
-- [Intrction](#introduction)
+- [Introction](#introduction)
 - [Dataset](#dataset)
-- [Preprocessing](#preprocessing)
+- [Preprocessing](#Preprocessing)
 - [Settings] (#settings)
 
 ''', unsafe_allow_html=True)
@@ -52,7 +52,7 @@ img3 = Image.open('augment.png')
 st.image(img3, caption = "Example of image augmentation", use_column_width='always')
 
 
-st.header('Model Settings')
+st.header('Settings')
 st.write('''
 The hyperparameter used in this model shown as listed below:
 ''')
