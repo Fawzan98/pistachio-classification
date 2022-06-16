@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import tarfile
+import gdown
 
 
 st.sidebar.markdown('''
@@ -69,6 +71,21 @@ st.table(df)
 img4 = Image.open('modeltrain.JPG')
 st.image(img4, caption = "Model in training", use_column_width='always')
 
+
+path = "content"
+if not os.pat.exists(path):
+  url = "https://drive.google.com/file/d/1gqzmrh1SAzVQdKM0usFnDL_eGkJJcJht/view?usp=sharing"
+  output = "model.tar.gz"
+  gdown.download(url=url, output=output, quiet=False, fuzzy=True)
+  file = tarfile.open("model.tar.gz")
+  file.extractall()
+  file.close()
+
+  st.write(os.listdr())
+
+
+
+  
 st.header('Model Testing')
 
 
