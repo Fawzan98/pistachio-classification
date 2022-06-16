@@ -15,6 +15,7 @@ st.sidebar.markdown('''
 - [Data-preprocessing](#data-preprocessing)
 - [Model Settings](#model-settings)
 - [Model Evaluation](#model-evaluation)
+- [Model Application](#model-application)
 
 ''', unsafe_allow_html=True)
 
@@ -91,7 +92,7 @@ st.write('''
 After the training stopped at epoch 39 via early stopping, it is time to evaluate the model. 
 ''')
 img5 = Image.open('validation loss.png')
-st.image(img4, caption = "Model validation loss graph", use_column_width='always')
+st.image(img5, caption = "Model validation loss graph", use_column_width='always')
 
 st.write('''
 Throughout 39 epochs, we can see that initially the loss is high for both training and validation test, and
