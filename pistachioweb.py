@@ -4,7 +4,7 @@ import streamlit as st
 
 st.sidebar.markdown('''
 # Table of Contents
-- [Introduction](#introduction)
+-> [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Preprocessing](#preprocessing)
 
@@ -33,8 +33,8 @@ img2 = ['kirmizi (23).jpg', 'siirt 24.jpg']
 st.image(img2,width=300, caption=["Kirmizi Pistachio", "Siirt Pistachio"])
 
 st.write('''
-We can see that both Pistachios' look very similar though some of them has distinct features though it can be difficult to recognize from naked eye.
-Now we will be using an Artificial Intelligence to reach conclusion where it could learn to make predictions between Kirmizi and Siirt Pistachio.
+We can see that both Pistachios' look very similar though some of them has distinct features and sometimes can be difficult to recognize from naked eye.
+Now we will be using an Artificial Intelligence to make it learn to make predictions between Kirmizi and Siirt Pistachio.
 ''')
 
 st.header('Preprocessing')
