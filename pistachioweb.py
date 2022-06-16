@@ -91,7 +91,7 @@ st.header('Model Evaluation')
 st.write('''
 After the training stopped at epoch 39 via early stopping, it is time to evaluate the model. 
 ''')
-img5 = Image.open('validation loss.png')
+img5 = Image.open('validation loss.JPG')
 st.image(img5, caption = "Model validation loss graph", use_column_width='always')
 
 st.write('''
@@ -99,7 +99,7 @@ Throughout 39 epochs, we can see that initially the loss is high for both traini
 later they gradually decrease as the model continuosly improve its weights and bias to achieve better results.
 ''')
 
-img6 = Image.open('accuracy.png')
+img6 = Image.open('accuracy.JPG')
 st.image(img6, caption = "Model accuracy graph", use_column_width='always')
 
 st.write('''
