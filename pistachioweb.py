@@ -6,8 +6,9 @@ st.sidebar.markdown('''
 # Table of Contents
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Data Preprocessing](#data-preprocessing)
+- [Data-preprocessing](#data-preprocessing)
 - [Model Settings](#model-settings)
+- [Model Testing](#model-testing)
 
 ''', unsafe_allow_html=True)
 
@@ -39,7 +40,7 @@ Now we will be using an Artificial Intelligence to make it learn to make predict
 The datasets were split into two: training sets and testing sets which contain 80% and 20% respectively.
 ''')
 
-st.header('Data-Preprocessing')
+st.header('Data-preprocessing')
 st.subheader('Image Augmentation')
 
 st.write('''
@@ -64,6 +65,11 @@ hyperparameter = {
 
 df = pd.DataFrame(hyperparameter)
 st.table(df)
+
+img4 = Image.open('modeltrain.JPG')
+st.image(img4, caption = "Model in training", use_column_width='always')
+
+st.header('Model Testing')
 
 
 
