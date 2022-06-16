@@ -7,7 +7,7 @@ st.sidebar.markdown('''
 - [Introduction](#introduction)
 - [Dataset](#dataset)
 - [Preprocessing](#preprocessing)
-- [Model Settings] (#model_settings)
+- [Model Settings] (#settings)
 
 ''', unsafe_allow_html=True)
 
@@ -40,7 +40,7 @@ The datasets were split into two: training sets and testing sets which contain 8
 ''')
 
 st.header('Preprocessing')
-#st.subheader('Image Augmentation')
+st.subheader('Image Augmentation')
 
 st.write('''
 A a technique of applying different transformations to original images which results in multiple transformed copies of the same image.
