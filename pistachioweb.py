@@ -4,10 +4,10 @@ import pandas as pd
 
 st.sidebar.markdown('''
 # Table of Contents
-- [Introduction](#introduction)
+- [Intrction](#introduction)
 - [Dataset](#dataset)
 - [Preprocessing](#preprocessing)
-- [Model Settings] (#settings)
+- [Settings] (#settings)
 
 ''', unsafe_allow_html=True)
 
