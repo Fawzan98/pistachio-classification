@@ -3,6 +3,8 @@ import pandas as pd
 import tarfile
 import gdown
 import os
+from tensorflow.keras.models import load_model
+import matplotlib.pyplot as plt
 
 
 st.sidebar.markdown('''
@@ -11,7 +13,7 @@ st.sidebar.markdown('''
 - [Dataset](#dataset)
 - [Data-preprocessing](#data-preprocessing)
 - [Model Settings](#model-settings)
-- [Model Testing](#model-testing)
+- [Model Evaluation](#model-evaluation)
 
 ''', unsafe_allow_html=True)
 
@@ -82,12 +84,15 @@ if not os.path.exists(path):
   file.extractall()
   file.close()
 
-st.write(os.listdir())
+#st.write(os.listdir())
 
 
-
+model = load_model('./content/model/vgg16_1h5')
   
-st.header('Model Testing')
+st.header('Model Evaluation')
+st.write('''
+After the training stopped at epoch 39 via early stopping, it is time to evaluate the model.
+''')
 
 
 
