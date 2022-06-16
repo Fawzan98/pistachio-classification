@@ -30,10 +30,10 @@ The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 
 
 
 img2 = Image.open('kirmizi (23).jpg')
-st.image(img2, caption = "Kirmizi Pistachio", use_column_width='always')
+st.image(img2, caption = "Kirmizi Pistachio")
 
 img3 = Image.open('siirt 24.jpg')
-st.image(img2, caption = "Siirt Pistachio", use_column_width='always')
+st.image(img3, caption = "Siirt Pistachio")
 
 
 st.write('''
