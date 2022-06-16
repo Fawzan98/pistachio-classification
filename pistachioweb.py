@@ -122,7 +122,7 @@ st.write(plt.imshow(img))
 img = np.expand_dims(img, axis=0)
 
 img7 = Image.open('img_testing/Kirmizi/kirmizi (3).jpg')
-st.image(img7, caption = "img_testing/Kirmizi/kirmizi (3).jpg")
+st.image(img7, caption = "img_testing/Kirmizi/kirmizi (3).jpg" width = 200)
 
 
 output = saved_model.predict(img)
