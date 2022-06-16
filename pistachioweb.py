@@ -28,8 +28,8 @@ st.write('''
 The datasets were obtained in Kaggle which contain a total of 2148 images, 1232 of Kirmizi and 916 of Siirt Pistachio.\n
 ''')
 
-im2 = ['kirmizi (23).jpg', 'siirt 24.jpg']
-st.image(images, use_column_width=True, caption=["some generic text"] * len(img2))
+img2 = ['kirmizi (23).jpg', 'siirt 24.jpg']
+st.image(img2, use_column_width=True, caption=["some generic text"] * len(img2))
 
 
 
