@@ -5,6 +5,7 @@ import gdown
 import os
 from tensorflow.keras.models import load_model
 import matplotlib.pyplot as plt
+import numpy as np
 
 
 st.sidebar.markdown('''
@@ -40,8 +41,8 @@ img2 = ['kirmizi (23).jpg', 'siirt 24.jpg']
 st.image(img2,width=300, caption=["Kirmizi Pistachio", "Siirt Pistachio"])
 
 st.write('''
-We can see that both Pistachios' look very similar though some of them has distinct features and sometimes can be difficult to recognize from naked eye.
-Now we will be using an Artificial Intelligence to make it learn to make predictions between Kirmizi and Siirt Pistachio.
+We can see that both Pistachios' look very similar through the naked eye and sometimes they may be difficult to differentiate. 
+Thus to solve the problem we will be using an Artificial Intelligence to make predictions between Kirmizi and Siirt Pistachio.
 The datasets were split into two: training sets and testing sets which contain 80% and 20% respectively.
 ''')
 
@@ -83,16 +84,33 @@ if not os.path.exists(path):
   file = tarfile.open("model.tar.gz")
   file.extractall()
   file.close()
-
-#st.write(os.listdir())
-
-
-model = load_model('./content/model/vgg16_1.h5')
+  
   
 st.header('Model Evaluation')
 st.write('''
-After the training stopped at epoch 39 via early stopping, it is time to evaluate the model.
+After the training stopped at epoch 39 via early stopping, it is time to evaluate the model. 
 ''')
+img5 = Image.open('validation loss.png')
+st.image(img4, caption = "Model validation loss graph", use_column_width='always')
+
+st.write('''
+Throughout 39 epochs, we can see that initially the loss is high for both training and validation test, and
+later they gradually decrease as the model continuosly improve its weights and bias to achieve better results.
+''')
+
+img6 = Image.open('accuracy.png')
+st.image(img6, caption = "Model accuracy graph", use_column_width='always')
+
+st.write('''
+In this graph, we can see the trends in training and validation gradually increase. This is good because the model
+is indeed learning and trying to become better at every epochs. We do not want the model to become overfit which
+affecting the trend of validation test to decrease. Thus, early stopping method is great to keep the model in best
+performance.
+''')
+
+st.header('Model application')
+
+model = load_model('./content/model/vgg16_1.h5')
 
 
 
