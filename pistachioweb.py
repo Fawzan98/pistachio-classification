@@ -115,14 +115,16 @@ st.header('Model application')
 saved_model = load_model('./content/model/vgg16_1.h5')
 
 
-img = image.load_img("img_testing/Kirmizi/kirmizi (1).jpg",target_size=(512,512))
+img7 = Image.open('img_testing/Siirt/siirt (3).jpg')
+st.image(img7, caption = 'img_testing/Siirt/siirt (3).jpg'"img_testing/Kirmizi/kirmizi (3).jpg", width = 200)
+
+img = image.load_img('img_testing/Siirt/siirt (3).jpg',target_size=(512,512))
 img = np.asarray(img)
 st.write(plt.imshow(img))
 #st.plotly_chart(img)
 img = np.expand_dims(img, axis=0)
 
-img7 = Image.open('img_testing/Kirmizi/kirmizi (3).jpg')
-st.image(img7, caption = "img_testing/Kirmizi/kirmizi (3).jpg", width = 200)
+
 
 
 output = saved_model.predict(img)
