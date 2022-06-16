@@ -6,7 +6,7 @@ st.sidebar.markdown('''
 # Table of Contents
 - [Introduction](#introduction)
 - [Dataset](#dataset)
-- [Preprocessing](#Preprocessing)
+- [Data Preprocessing](#data-preprocessing)
 - [Model Settings](#model-settings)
 
 ''', unsafe_allow_html=True)
@@ -39,7 +39,7 @@ Now we will be using an Artificial Intelligence to make it learn to make predict
 The datasets were split into two: training sets and testing sets which contain 80% and 20% respectively.
 ''')
 
-st.header('Preprocessing')
+st.header('Data-Preprocessing')
 st.subheader('Image Augmentation')
 
 st.write('''
