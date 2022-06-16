@@ -40,7 +40,7 @@ The datasets were split into two: training sets and testing sets which contain 8
 ''')
 
 st.header('Preprocessing')
-st.subheader('Image Augmentation')
+#st.subheader('Image Augmentation')
 
 st.write('''
 A a technique of applying different transformations to original images which results in multiple transformed copies of the same image.
@@ -59,11 +59,13 @@ The hyperparameter used in this model shown as listed below:
 
 hyperparameter = {
   "Settings": ["Input Shape", "Epoch", "Learning Rate", "Dropout", "Activation", "Optimizer", "Early Stopping"],
-  "Descriptions": ["512 x 512", "50", "0.005", "0.1", "Softmax", "Adam", "10 Epoch"]
+  "Descriptions": ["512 x 512", "50", "0.005", "0.1", "Softmax", "Adam", "10 Validation Loss"]
 }
 
 df = pd.DataFrame(hyperparameter)
 st.table(df)
+
+
 
 
 
