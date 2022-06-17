@@ -7,7 +7,7 @@ from tensorflow.keras.models import load_model
 from keras.preprocessing import image
 import matplotlib.pyplot as plt
 import numpy as np
-from cv2 import cv2
+import opencv
 
 
 st.sidebar.markdown('''
@@ -127,8 +127,8 @@ st.image(img7, caption = img_path, width = 200)
 
 img_size = 512
 
-imges = cv2.imread(img_path)
-test_image = cv2.resize(imges, (int(img_size*1.5), int(img_size*1.5)))
+imges = opencv.imread(img_path)
+test_image = opencv.resize(imges, (int(img_size*1.5), int(img_size*1.5)))
 test_image = preprocess(test_image)
 test_image = edge_and_cut(test_image)
 test_image = np.array(test_image)
