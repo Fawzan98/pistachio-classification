@@ -8,6 +8,7 @@ from keras.preprocessing import image
 import matplotlib.pyplot as plt
 import numpy as np
 import cv2
+import random
 #import preprocess
 
 
@@ -119,12 +120,32 @@ class_dict = {'Kirmizi Pistachio': 0,
 }
 
 class_names = list(class_dict.keys())
-
 saved_model = load_model('./content/model/vgg16_1.h5')
-img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
-#img_path = "img_testing/Siirt/siirt (3).jpg"
+
+img_path = "img/testing"
+
+def choose_files():
+  img_path = "/content/drive/MyDrive/img_testing"
+  random_folder = random.choice(os.listdir(img_path))
+  random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
+  return random_pic
+
+x,y,z = choose_files()
+
+
 img7 = Image.open(img_path)
 st.image(img7, caption = img_path, width = 200)
+
+img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
+play = st.radio(
+  "Choose your Pistachio:",
+  
+  
+)
+
+
+#img_path = "img_testing/Siirt/siirt (3).jpg"
+
 
 img_size = 512
 
