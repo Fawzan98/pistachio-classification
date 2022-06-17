@@ -112,28 +112,36 @@ performance.
 
 st.header('Model application')
 
+class_dict = {'Kirmizi Pistachio': 0,
+              'Siirt Pistachio': 1
+}
+
+class_names = list(class_dict.keys())
+
 saved_model = load_model('./content/model/vgg16_1.h5')
 #img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
 img_path = "img_testing/Siirt/siirt (3).jpg"
 img7 = Image.open(img_path)
 st.image(img7, caption = img_path, width = 200)
 
-img = image.load_img(img_path,target_size=(512,512))
-img = np.asarray(img)
-plt.imshow(img)
+img_size = 512
 
-img = np.expand_dims(img, axis=0)
+imges = cv2.imread(img_path)
+test_image = cv2.resize(imges, (int(img_size*1.5), int(img_size*1.5)))
+test_image = preprocess(test_image)
+test_image = edge_and_cut(test_image)
+test_image = np.array(test_image)
+test_image = np.expand_dims(test_image, axis=0)
+img_class = model.predict(test_image)
+img_class = img_class.flatten()
+m = max(img_class)
+for index, item in enumerate(img_class):
+    if item == m:
+        pred_class = class_names[index]
+st.write(pred_class)
 
 
 
-
-output = saved_model.predict(img)
-
-st.write(output)
-if output[0][0] > output[0][1]:
-    st.write('Prediction : Siirt Pistachio')
-else:
-    st.write("Prediction : Kirmizi Pistachio")
 
 
 
