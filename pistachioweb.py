@@ -129,7 +129,7 @@ st.image(img7, caption = img_path, width = 200)
 img_size = 512
 
 imges = cv2.imread(img_path)
-test_image = cv2.resize(imges, (int(img_size*1.5), int(img_size*1.5)))
+test_image = cv2.resize(imges, (int(img_size), int(img_size)))
 #test_image = preprocess(test_image)
 #test_image = edge_and_cut(test_image)
 test_image = np.array(test_image)
