@@ -121,8 +121,8 @@ class_dict = {'Kirmizi Pistachio': 0,
 class_names = list(class_dict.keys())
 
 saved_model = load_model('./content/model/vgg16_1.h5')
-#img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
-img_path = "img_testing/Siirt/siirt (3).jpg"
+img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
+#img_path = "img_testing/Siirt/siirt (3).jpg"
 img7 = Image.open(img_path)
 st.image(img7, caption = img_path, width = 200)
 
