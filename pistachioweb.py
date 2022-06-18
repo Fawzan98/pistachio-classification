@@ -142,6 +142,12 @@ z = choose_files()
 
 img8 = [x, y, z]
 st.image(img8,width=200, caption=[x,y,z])
+
+
+title = st.text_input('Copy the image link and insert into text input', '')
+
+
+
 #img8 = Image.open(full_path)
 #st.image(img8, caption = full_path, width = 200)
 
@@ -150,20 +156,19 @@ st.image(img8,width=200, caption=[x,y,z])
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
 
-
-
-#img_size = 512
-#imges = cv2.imread(img_path)
-#test_image = cv2.resize(imges, (int(img_size), int(img_size)))
-#test_image = np.array(test_image)
-#test_image = np.expand_dims(test_image, axis=0)
-#img_class = saved_model.predict(test_image)
-#img_class = img_class.flatten()
-#m = max(img_class)
-#for index, item in enumerate(img_class):
-#    if item == m:
-#        pred_class = class_names[index]
+img_size = 512
+imges = cv2.imread(title)
+test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+test_image = np.array(test_image)
+test_image = np.expand_dims(test_image, axis=0)
+img_class = saved_model.predict(test_image)
+img_class = img_class.flatten()
+m = max(img_class)
+for index, item in enumerate(img_class):
+    if item == m:
+        pred_class = class_names[index]
 #st.write(pred_class)
+st.write('The prediction on this Pistachio is ', pred_class)
 
 
 
