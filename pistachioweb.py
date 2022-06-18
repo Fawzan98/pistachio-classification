@@ -11,6 +11,7 @@ import cv2
 import random
 #import preprocess
 
+"st.session_state object:", st.session_state
 
 st.sidebar.markdown('''
 # Table of Contents
@@ -124,13 +125,27 @@ saved_model = load_model('./content/model/vgg16_1.h5')
 
 img_path = "img/testing"
 
-def choose_files():
-  img_path = "img_testing"
-  random_folder = random.choice(os.listdir(img_path))
-  random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
-  full_path = img_path + "/" + random_folder + "/" + random_pic
+
+if 'random_state' not in st.session_state:
+  st.session_state.random_state = False
+if 'random_counter' not in st.session_state:
+  st.session_state['random_counter'] = 0
+
+def choose_files(): 
+  if st.session_state.random_state == False:
+    if st.session_state['random_counter'] < 3:
+      img_path = "img_testing"
+      random_folder = random.choice(os.listdir(img_path))
+      random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
+      full_path = img_path + "/" + random_folder + "/" + random_pic
+      st.session_state['random_counter'] += 1
   
-  return full_path
+      return full_path
+    else:
+      st.session_state.random_state = not st.session_state.random_state
+ 
+    
+  
 
 x = choose_files()  
 y = choose_files()
