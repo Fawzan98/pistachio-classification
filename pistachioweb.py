@@ -144,7 +144,7 @@ img8 = [x, y, z]
 st.image(img8,width=200, caption=[x,y,z])
 
 
-title = st.text_input('Copy the image link and insert into text input', '')
+title = st.text_input('Copy the image link and insert into text input', x)
 
 
 
