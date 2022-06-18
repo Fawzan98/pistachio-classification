@@ -132,12 +132,7 @@ def choose_files():
   st.image(img8, caption = random_pic, width = 200)
   return random_pic
 
-x,y,z = choose_files()
-
-def display_img(chimg):
-  
-  
-  
+x,y,z = choose_files()  
 #img7 = Image.open(img_path)
 #st.image(img7, caption = img_path, width = 200)
 
