@@ -148,7 +148,7 @@ play = st.radio(
 
 if play == x:
   st.write('You have choose x')
-else if play == y:
+elif play == y:
   st.write('You have choose y')
 else:
   st.write('You have choose z')
