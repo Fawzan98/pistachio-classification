@@ -140,10 +140,10 @@ z = choose_files()
 #st.image(img7, caption = img_path, width = 200)
 
 #img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
+
+choose_pic = [x, y, z]
 play = st.radio(
-  "Choose your Pistachio:", 
-  (x, y, z)
-)
+  "Choose your Pistachio:", choose_pic)
 
 
 #img_path = "img_testing/Siirt/siirt (3).jpg"
