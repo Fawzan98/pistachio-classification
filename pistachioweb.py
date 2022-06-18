@@ -125,7 +125,7 @@ saved_model = load_model('./content/model/vgg16_1.h5')
 img_path = "img/testing"
 
 def choose_files():
-  img_path = "/img_testing"
+  img_path = "img_testing"
   random_folder = random.choice(os.listdir(img_path))
   random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
   img8 = Image.open(random_pic)
