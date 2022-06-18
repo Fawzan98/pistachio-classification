@@ -138,7 +138,7 @@ def choose_files():
       random_folder = random.choice(os.listdir(img_path))
       random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
       full_path = img_path + "/" + random_folder + "/" + random_pic
-      st.session_state['random_counter'] += 1
+      
   
       return full_path
     else:
@@ -166,24 +166,38 @@ title = st.text_input('Copy the image link and insert into text input', 'image-l
 #img8 = Image.open(full_path)
 #st.image(img8, caption = full_path, width = 200)
 
+next = st.button("Predict next image")
+
+if next:
+  if st.session_state["radio_option"] == x:
+    st.session_state.radio_option = y
+    st.session_state['random_counter'] += 1
+  elif st.session_state["radio_option"] == y:
+    st.session_state.radio_option = z
+    st.session_state['random_counter'] += 1
+  else:
+    st.session_state.radio_option = x
+    st.session_state['random_counter'] += 1
 
 
+    
+    option = st.radio("Pick your Pistachio", img8, key="radio_option")
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
 
-img_size = 512
-imges = cv2.imread(title)
-test_image = cv2.resize(imges, (int(img_size), int(img_size)))
-test_image = np.array(test_image)
-test_image = np.expand_dims(test_image, axis=0)
-img_class = saved_model.predict(test_image)
-img_class = img_class.flatten()
-m = max(img_class)
-for index, item in enumerate(img_class):
-    if item == m:
-        pred_class = class_names[index]
+#img_size = 512
+#imges = cv2.imread(title)
+#test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+#test_image = np.array(test_image)
+#test_image = np.expand_dims(test_image, axis=0)
+#img_class = saved_model.predict(test_image)
+#img_class = img_class.flatten()
+#m = max(img_class)
+#for index, item in enumerate(img_class):
+#    if item == m:
+#        pred_class = class_names[index]
 #st.write(pred_class)
-st.write('The prediction on this Pistachio is ', pred_class)
+#st.write('The prediction on this Pistachio is ', pred_class)
 
 
 
