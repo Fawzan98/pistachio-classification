@@ -161,13 +161,23 @@ img8 = [x, y, z]
 st.image(img8,width=200, caption=[x,y,z])
 
 
-title = st.text_input('Copy the image link and insert into text input', 'image-link')
+#title = st.text_input('Copy the image link and insert into text input', 'image-link')
 
 
 
 #img8 = Image.open(full_path)
 #st.image(img8, caption = full_path, width = 200)
 
+option = st.radio("Pick your Pistachio", img8, key="radio_option")
+
+if option == x:
+  st.write(f"Predicted {x} image")
+elif option == y:
+  st.write(f"Predicted {y} image") 
+else:
+  st.write(f"Predicted {z} image")
+  
+  
 next = st.button("Predict next image")
 
 if next:
@@ -183,7 +193,7 @@ if next:
 
 
     
-    option = st.radio("Pick your Pistachio", img8, key="radio_option")
+   
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
 
