@@ -129,8 +129,7 @@ def choose_files():
   random_folder = random.choice(os.listdir(img_path))
   random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
   full_path = img_path + "/" + random_folder + "/" + random_pic
-  img8 = Image.open(full_path)
-  st.image(img8, caption = full_path, width = 200)
+  
   return full_path
 
 x = choose_files()  
@@ -141,20 +140,17 @@ z = choose_files()
 
 #img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
 
-choose_pic = [x, y, z]
-play = st.radio(
-  "Choose your Pistachio:", choose_pic)
+img8 = [x, y, z]
+st.image(img8,width=300, caption=[x,y,z])
+#img8 = Image.open(full_path)
+#st.image(img8, caption = full_path, width = 200)
+
 
 
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
 
-if play == x:
-  st.write('You have choose x')
-elif play == y:
-  st.write('You have choose y')
-else:
-  st.write('You have choose z')
+
 
 #img_size = 512
 #imges = cv2.imread(img_path)
