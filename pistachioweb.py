@@ -148,6 +148,9 @@ def choose_files():
 x = choose_files()  
 y = choose_files()
 z = choose_files() 
+
+for key in st.session_state.keys():
+  del st.session_state[key]
 st.session_state
 #img7 = Image.open(img_path)
 #st.image(img7, caption = img_path, width = 200)
