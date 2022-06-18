@@ -138,6 +138,7 @@ def choose_files():
       random_folder = random.choice(os.listdir(img_path))
       random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
       full_path = img_path + "/" + random_folder + "/" + random_pic
+      st.session_state['random_counter'] += 1
       return full_path
     else:
       st.session_state.random_state = not st.session_state.random_state
