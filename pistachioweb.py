@@ -133,7 +133,9 @@ def choose_files():
   st.image(img8, caption = full_path, width = 200)
   return full_path
 
-x,y,z = choose_files()  
+x = choose_files()  
+y = choose_files()
+z = choose_files() 
 #img7 = Image.open(img_path)
 #st.image(img7, caption = img_path, width = 200)
 
