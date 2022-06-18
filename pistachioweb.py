@@ -141,7 +141,7 @@ z = choose_files()
 #img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
 
 img8 = [x, y, z]
-st.image(img8,width=300, caption=[x,y,z])
+st.image(img8,width=200, caption=[x,y,z])
 #img8 = Image.open(full_path)
 #st.image(img8, caption = full_path, width = 200)
 
