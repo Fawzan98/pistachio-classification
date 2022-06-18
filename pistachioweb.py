@@ -128,9 +128,10 @@ def choose_files():
   img_path = "img_testing"
   random_folder = random.choice(os.listdir(img_path))
   random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
-  img8 = Image.open(random_pic)
-  st.image(img8, caption = random_pic, width = 200)
-  return random_pic
+  full_path = img_path + "/" + random_folder + "/" + random_pic
+  img8 = Image.open(full_path)
+  st.image(img8, caption = full_path, width = 200)
+  return full_path
 
 x,y,z = choose_files()  
 #img7 = Image.open(img_path)
