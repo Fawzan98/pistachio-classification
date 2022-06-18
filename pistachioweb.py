@@ -125,45 +125,56 @@ saved_model = load_model('./content/model/vgg16_1.h5')
 img_path = "img/testing"
 
 def choose_files():
-  img_path = "/content/drive/MyDrive/img_testing"
+  img_path = "/img_testing"
   random_folder = random.choice(os.listdir(img_path))
   random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
+  img8 = Image.open(random_pic)
+  st.image(img8, caption = random_pic, width = 200)
   return random_pic
 
 x,y,z = choose_files()
 
+def display_img(chimg):
+  
+  
+  
+#img7 = Image.open(img_path)
+#st.image(img7, caption = img_path, width = 200)
 
-img7 = Image.open(img_path)
-st.image(img7, caption = img_path, width = 200)
-
-img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
+#img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
 play = st.radio(
-  "Choose your Pistachio:",
-  
-  
+  "Choose your Pistachio:", 
+  (x, y, z)
 )
 
 
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
 
-img_size = 512
+if play == x:
+  st.write('You have choose x')
+else if play == y:
+  st.write('You have choose y')
+else:
+  st.write('You have choose z')
 
-imges = cv2.imread(img_path)
-test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+#img_size = 512
+#imges = cv2.imread(img_path)
+#test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+#test_image = np.array(test_image)
+#test_image = np.expand_dims(test_image, axis=0)
+#img_class = saved_model.predict(test_image)
+#img_class = img_class.flatten()
+#m = max(img_class)
+#for index, item in enumerate(img_class):
+#    if item == m:
+#        pred_class = class_names[index]
+#st.write(pred_class)
+
+
+
 #test_image = preprocess(test_image)
 #test_image = edge_and_cut(test_image)
-test_image = np.array(test_image)
-test_image = np.expand_dims(test_image, axis=0)
-img_class = saved_model.predict(test_image)
-img_class = img_class.flatten()
-m = max(img_class)
-for index, item in enumerate(img_class):
-    if item == m:
-        pred_class = class_names[index]
-st.write(pred_class)
-
-
 
 
 
