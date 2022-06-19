@@ -11,7 +11,7 @@ import cv2
 import random
 #import preprocess
 
-"st.session_state object:", st.session_state
+
 
 st.sidebar.markdown('''
 # Table of Contents
@@ -116,6 +116,11 @@ performance.
 
 st.header('Model application')
 
+st.write('''
+This application display 3 random Pistachio type and directly predicted its type. The link of image were inserted to verify its accuracy on predicted and labels.
+The user also can click on 'Predict other Pistachio images' button generate other 3 random Pistachio's images. Have fun playing!
+''')
+
 class_dict = {'Kirmizi Pistachio': 0,
               'Siirt Pistachio': 1
 }
@@ -139,32 +144,10 @@ y = choose_files()
 z = choose_files() 
 
 
-#img7 = Image.open(img_path)
-#st.image(img7, caption = img_path, width = 200)
-
-#img_path = "img_testing/Kirmizi/kirmizi (3).jpg"
 
 img8 = [x, y, z]
 st.image(img8,width=200, caption=[x,y,z])
 
-
-#title = st.text_input('Copy the image link and insert into text input', 'image-link')
-
-
-
-#img8 = Image.open(full_path)
-#st.image(img8, caption = full_path, width = 200)
-
-
-  
-  
-
-  
-
-
-    
-   
-#img_path = "img_testing/Siirt/siirt (3).jpg"
 
 for pred_img in img8:
     img_size = 512
@@ -178,16 +161,11 @@ for pred_img in img8:
     for index, item in enumerate(img_class):
         if item == m:
             pred_class = class_names[index]
-    st.write(f'The prediction of {pred_img}', pred_class)
+    st.write(f'The prediction of {pred_img} is ', pred_class)
 
 
 next = st.button("Predict other Pistachio images")
 
-#if next:
-  
-
-#test_image = preprocess(test_image)
-#test_image = edge_and_cut(test_image)
 
 
 
