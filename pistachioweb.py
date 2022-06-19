@@ -178,11 +178,10 @@ for pred_img in img8:
     for index, item in enumerate(img_class):
         if item == m:
             pred_class = class_names[index]
-    st.write(pred_class)
-    st.write('The prediction on this Pistachio is ', pred_class)
+    st.write(f'The prediction of {pred_img}', pred_class)
 
 
-next = st.button("Predict next image")
+next = st.button("Predict other Pistachio images")
 
 #if next:
   
