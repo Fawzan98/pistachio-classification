@@ -126,33 +126,19 @@ saved_model = load_model('./content/model/vgg16_1.h5')
 img_path = "img/testing"
 
 
-if 'random_state' not in st.session_state:
-  st.session_state.random_state = False
-if 'random_counter' not in st.session_state:
-  st.session_state['random_counter'] = 0
 
 def choose_files(): 
-  if st.session_state.random_state == False:
-    if st.session_state['random_counter'] < 3:
-      img_path = "img_testing"
-      random_folder = random.choice(os.listdir(img_path))
-      random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
-      full_path = img_path + "/" + random_folder + "/" + random_pic
-      st.session_state['random_counter'] += 1
-      return full_path
-    else:
-      st.session_state.random_state = not st.session_state.random_state
- 
-    
-  
-
+  img_path = "img_testing"
+  random_folder = random.choice(os.listdir(img_path))
+  random_pic = random.choice(os.listdir(img_path+"/"+random_folder))
+  full_path = img_path + "/" + random_folder + "/" + random_pic
+  return full_path
+   
 x = choose_files()  
 y = choose_files()
 z = choose_files() 
 
-#for key in st.session_state.keys():
-#  del st.session_state[key]
-st.session_state
+
 #img7 = Image.open(img_path)
 #st.image(img7, caption = img_path, width = 200)
 
@@ -169,50 +155,37 @@ st.image(img8,width=200, caption=[x,y,z])
 #img8 = Image.open(full_path)
 #st.image(img8, caption = full_path, width = 200)
 
-option = st.radio("Pick your Pistachio", img8, key="radio_option")
 
-if option == x:
-  st.write(f"Predicted {x} image")
-elif option == y:
-  st.write(f"Predicted {y} image") 
-else:
-  st.write(f"Predicted {z} image")
   
   
-next = st.button("Predict next image")
 
-if next:
-  if st.session_state["radio_option"] == x:
-    st.session_state.radio_option = y
-    st.session_state['random_counter'] += 1
-  elif st.session_state["radio_option"] == y:
-    st.session_state.radio_option = z
-    st.session_state['random_counter'] += 1
-  else:
-    st.session_state.radio_option = x
-    st.session_state['random_counter'] += 1
+  
 
 
     
    
 #img_path = "img_testing/Siirt/siirt (3).jpg"
 
+for pred_img in img8:
+    img_size = 512
+    imges = cv2.imread(pred_img)
+    test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+    test_image = np.array(test_image)
+    test_image = np.expand_dims(test_image, axis=0)
+    img_class = saved_model.predict(test_image)
+    img_class = img_class.flatten()
+    m = max(img_class)
+    for index, item in enumerate(img_class):
+        if item == m:
+            pred_class = class_names[index]
+    st.write(pred_class)
+    st.write('The prediction on this Pistachio is ', pred_class)
 
-#img_size = 512
-#imges = cv2.imread(title)
-#test_image = cv2.resize(imges, (int(img_size), int(img_size)))
-#test_image = np.array(test_image)
-#test_image = np.expand_dims(test_image, axis=0)
-#img_class = saved_model.predict(test_image)
-#img_class = img_class.flatten()
-#m = max(img_class)
-#for index, item in enumerate(img_class):
-#    if item == m:
-#        pred_class = class_names[index]
-#st.write(pred_class)
-#st.write('The prediction on this Pistachio is ', pred_class)
 
+next = st.button("Predict next image")
 
+#if next:
+  
 
 #test_image = preprocess(test_image)
 #test_image = edge_and_cut(test_image)
