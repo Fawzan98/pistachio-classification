@@ -117,7 +117,7 @@ performance.
 st.header('Model application')
 
 st.write('''
-This application display 3 random Pistachio type and directly predicted its type. The link of image were inserted to verify its accuracy on predicted and labels.
+This application display 3 random Pistachio images and directly predicted its type. The link of image were inserted to verify its accuracy on predicted and labels.
 The user also can click on 'Predict other Pistachio images' button generate other 3 random Pistachio's images. Have fun playing!
 ''')
 
