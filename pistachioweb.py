@@ -142,31 +142,32 @@ def choose_files():
    
 x = choose_files()  
 y = choose_files()
-z = choose_files() 
+#z = choose_files() 
 
 
 
-img8 = [x, y, z]
-st.image(img8,width=200, caption=[x,y,z])
 
-
-for pred_img in img8:
-    img_size = 512
-    imges = cv2.imread(pred_img)
-    test_image = cv2.resize(imges, (int(img_size), int(img_size)))
-    test_image = np.array(test_image)
-    test_image = np.expand_dims(test_image, axis=0)
-    img_class = saved_model.predict(test_image)
-    img_class = img_class.flatten()
-    m = max(img_class)
-    for index, item in enumerate(img_class):
-        if item == m:
-            pred_class = class_names[index]
-    st.write(f'The prediction of {pred_img} is ', pred_class)
 
 
 next = st.button("Predict other Pistachio images")
 
+if next:
+  img8 = [x, y]
+  st.image(img8,width=200, caption=[x,y])
+  
+  for pred_img in img8:
+      img_size = 512
+      imges = cv2.imread(pred_img)
+      test_image = cv2.resize(imges, (int(img_size), int(img_size)))
+      test_image = np.array(test_image)
+      test_image = np.expand_dims(test_image, axis=0)
+      img_class = saved_model.predict(test_image)
+      img_class = img_class.flatten()
+      m = max(img_class)
+      for index, item in enumerate(img_class):
+          if item == m:
+              pred_class = class_names[index]
+      st.write(f'The prediction of {pred_img} is ', pred_class)
 
 
 
