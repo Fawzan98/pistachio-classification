@@ -118,8 +118,8 @@ performance.
 st.header('Model application')
 
 st.write('''
-This application display 3 random Pistachio images and directly predicted its type. The link of image were inserted to verify its accuracy on predicted and labels.
-The user also can click on 'Predict other Pistachio images' button generate other 3 random Pistachio's images. Have fun playing!
+When the user click 'Predict Pistachios' button, it will display 2 random Pistachio images and then predicted its type.
+The link of image were inserted to verify its accuracy on predicted and labels. Have fun playing!
 ''')
 
 class_dict = {'Kirmizi Pistachio': 0,
@@ -145,11 +145,7 @@ y = choose_files()
 #z = choose_files() 
 
 
-
-
-
-
-next = st.button("Predict other Pistachio images")
+next = st.button("Predict Pistachios")
 
 if next:
   img8 = [x, y]
